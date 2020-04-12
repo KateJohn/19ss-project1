@@ -1,0 +1,105 @@
+#leftBody {
+    margin-left: 40px;
+    line-height: 25px;
+    display: inline-block;
+}
+
+#search {
+    background-color: #aebdbe;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 240px;
+}
+
+#hotThemes {
+    background-color: #aebdbe;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 240px;
+}
+
+.firstType {
+    font-weight: bold;
+}
+
+#leftBody a {
+    color: #a57229;
+}
+
+#dropdown1 a {
+    color: seagreen;
+}
+
+#dropdown2 a {
+    color: seagreen;
+}
+
+#dropdown3 a {
+    color: cadetblue;
+}
+
+#dropdown4 a {
+    color: cadetblue;
+}
+
+#dropdown5 a {
+    color: cadetblue;
+}
+
+#dropdown6 a {
+    color: cadetblue;
+}
+
+.dropdownA {
+    display: none;
+}
+
+#hotCountries {
+    background-color: #aebdbe;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 240px;
+}
+
+#hotCities {
+    background-color: #aebdbe;
+    border-radius: 20px;
+    padding: 20px;
+    width: 240px;
+}
+
+#rightBody {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 40px;
+    background-color: #aebdbe;
+    border-radius: 20px;
+    padding: 20px;
+    line-height: 30px;
+    margin-right: 40px;
+}
+
+.picture {
+    margin: 20px;
+    display: inline-block;
+}
+
+.form {
+    display: inline-block;
+}
+
+select {
+    width: 80px;
+}
+
+#pages {
+    text-align: center;
+}
+
+#pages a {
+    margin: 20px;
+    color: steelblue;
+}

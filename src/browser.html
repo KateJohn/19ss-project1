@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/body.css">
+    <link rel="stylesheet" type="text/css" href="css/browser.css">
+    <script>
+        function move() {
+            const s1 = document.getElementById('country');
+            const s2 = document.getElementById('city'); <!-- 获取一级和二级的属性-->
+            let add, texts;
+            if (s1.value === '中国') {
+                add = ['noneCity', 'Shanghai', 'Kunming', 'Beijing', 'Yantai'];
+                texts = ['全部', '上海', '昆明', '北京', '烟台'];
+            } else if (s1.value === '日本') {
+                add = ['noneCity', 'Tokyo', 'Osaka', 'Kamakura'];
+                texts = ['全部', '东京', '大阪', '镰仓'];
+            } else if (s1.value === '意大利') {
+                add = ['noneCity', 'Roma', 'Milan', 'Venice', 'Florence'];
+                texts = ['全部', '罗马', '米兰', '威尼斯', '佛罗伦萨'];
+            } else if (s1.value === '美国') {
+                add = ['noneCity', 'New York', 'San Francisco', 'Washington'];
+                texts = ['全部', '纽约', '旧金山', '华盛顿'];
+            } else if (s1.value === '全部') {
+                add = ['noneCity'];
+                texts = ['全部'];
+            } else {
+                add = null; <!--若没有就为空，当然不可能出现的-->
+            }
+            s2.length = 0;
+            for (let i = 0; i < add.length; i++) {
+                const ss = new Option();
+                ss.text = texts[i].split()[0];
+                ss.id = add[i].split()[0];
+                ss.value = texts[i].split()[0];
+                s2.add(ss);
+                <!--把text值添加到二级select中，显示出来-->
+            }
+        }
+    </script>
+    <title>浏览</title>
+</head>
+<body>
+<div id="header">
+    <div id="logo">
+        <img src="../img/logo.jpg" alt width="35" height="35">
+    </div>
+    <div id="navItems">
+        <a href="../index.html" id="AIndex">首页</a>
+        <a href="browser.html" id="ABrowse" class="select">浏览</a>
+        <a href="search.html" id="ASearch">搜索</a>
+    </div>
+    <div class="dropdown">
+        <span>个人中心</span>
+        <div class="dropdownContent">
+            <a href="upload.html" id="AUpload"><img src="../img/upload.png" width="20" alt/> 上传</a><br>
+            <a href="myPhoto.html" id="AMP"><img src="../img/mine.png" width="20" alt/> 我的照⽚</a><br>
+            <a href="myLike.html" id="AML"><img src="../img/like.png" width="20" alt/> 我的收藏</a><br>
+            <a href="login.html" id="ALogin"><img src="../img/login.png" width="20" alt/> 登⼊</a><br>
+        </div>
+    </div>
+</div>
+<div id="body">
+    <div id="leftBody">
+        <form id="search">
+            <p>搜索标题</p>
+            <label>
+                <input id="searchTitle" required name="searchTitle" type="text" value="">
+            </label>
+            <button type="button" onclick="alert('已找到 '+document.getElementById('searchTitle').value+' 的结果')">搜索</button>
+        </form>
+        <div id="hotThemes">
+            <a onclick="document.getElementById('dropdown1').style.display='block'" class="firstType">热⻔主题快速浏览</a>
+            <div class="dropdownA" id="dropdown1">
+                <hr>
+                <a onclick="alert('已显示自然的结果');document.getElementById('sceneryTheme').selected='selected'">自然</a>
+                <hr>
+                <a onclick="alert('已显示城市的结果');document.getElementById('cityTheme').selected='selected'">城市</a>
+                <hr>
+                <a onclick="alert('已显示建筑的结果');document.getElementById('buildingTheme').selected='selected'">建筑</a>
+                <hr>
+                <a onclick="alert('已显示动物的结果');document.getElementById('animalTheme').selected='selected'">动物</a>
+            </div>
+        </div>
+        <div id="hotCountries">
+            <a onclick="document.getElementById('dropdown2').style.display='block'" class="firstType">热⻔国家快速浏览</a>
+            <div class="dropdownA" id="dropdown2">
+                <hr>
+                <a onclick="document.getElementById('china').selected='selected';move();document.getElementById('dropdown3').style.display='block';document.getElementById('dropdown4').style.display='none';document.getElementById('dropdown5').style.display='none';document.getElementById('dropdown6').style.display='none'">中国</a>
+                <div class="dropdownA" id="dropdown3">
+                    <hr>
+                    <a onclick="alert('已显示上海的结果');document.getElementById('Shanghai').selected='selected'">上海</a>
+                    <hr>
+                    <a onclick="alert('已显示昆明的结果');document.getElementById('Kunming').selected='selected'">昆明</a>
+                    <hr>
+                    <a onclick="alert('已显示北京的结果');document.getElementById('Beijing').selected='selected'">北京</a>
+                    <hr>
+                    <a onclick="alert('已显示烟台的结果');document.getElementById('Yantai').selected='selected'">烟台</a>
+                </div>
+                <hr>
+                <a onclick="document.getElementById('japan').selected='selected';move();document.getElementById('dropdown3').style.display='none';document.getElementById('dropdown4').style.display='block';document.getElementById('dropdown5').style.display='none';document.getElementById('dropdown6').style.display='none'">日本</a>
+                <div class="dropdownA" id="dropdown4">
+                    <hr>
+                    <a onclick="alert('已显示东京的结果');document.getElementById('Tokyo').selected='selected'">东京</a>
+                    <hr>
+                    <a onclick="alert('已显示大阪的结果');document.getElementById('Osaka').selected='selected'">大阪</a>
+                    <hr>
+                    <a onclick="alert('已显示镰仓的结果');document.getElementById('Kamakura').selected='selected'">镰仓</a>
+                </div>
+                <hr>
+                <a onclick="document.getElementById('italy').selected='selected';move();document.getElementById('dropdown3').style.display='none';document.getElementById('dropdown4').style.display='none';document.getElementById('dropdown5').style.display='block';document.getElementById('dropdown6').style.display='none'">意大利</a>
+                <div class="dropdownA" id="dropdown5">
+                    <hr>
+                    <a onclick="alert('已显示罗马的结果');document.getElementById('Roma').selected='selected'">罗马</a>
+                    <hr>
+                    <a onclick="alert('已显示米兰的结果');document.getElementById('Milan').selected='selected'">米兰</a>
+                    <hr>
+                    <a onclick="alert('已显示威尼斯的结果');document.getElementById('Venice').selected='selected'">威尼斯</a>
+                    <hr>
+                    <a onclick="alert('已显示佛罗伦萨的结果');document.getElementById('Florence').selected='selected'">佛罗伦萨</a>
+                </div>
+                <hr>
+                <a onclick="document.getElementById('america').selected='selected';move();document.getElementById('dropdown3').style.display='none';document.getElementById('dropdown4').style.display='none';document.getElementById('dropdown5').style.display='none';document.getElementById('dropdown6').style.display='block'">美国</a>
+                <div class="dropdownA" id="dropdown6">
+                    <hr>
+                    <a onclick="alert('已显示纽约的结果');document.getElementById('New York').selected='selected'">纽约</a>
+                    <hr>
+                    <a onclick="alert('已显示旧金山的结果');document.getElementById('San Francisco').selected='selected'">旧金山</a>
+                    <hr>
+                    <a onclick="alert('已显示华盛顿的结果');document.getElementById('Washington').selected='selected'">华盛顿</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="rightBody">
+        <div id="rightTitle">
+            <p>筛选</p>
+        </div>
+        <div id="selectors">
+            <form>
+                <p class="form">主题</p>
+                <label class="form">
+                    <select id="theme" class="theme">
+                        <option id="noneTheme" value="全部" selected>全部</option>
+                        <option id="sceneryTheme" value="自然">自然</option>
+                        <option id="cityTheme" value="城市">城市</option>
+                        <option id="buildingTheme" value="建筑">建筑</option>
+                        <option id="animalTheme" value="动物">动物</option>
+                    </select>
+                </label>
+                <p class="form">国家</p>
+                <label class="form">
+                    <select id="country" class="country" onchange="move()">
+                        <option id="noneCountry" value="全部" selected>全部</option>
+                        <option id="china" value="中国">中国</option>
+                        <option id="japan" value="日本">日本</option>
+                        <option id="italy" value="意大利">意大利</option>
+                        <option id="america" value="美国">美国</option>
+                    </select>
+                </label>
+                <p class="form">城市</p>
+                <label class="form">
+                    <select id="city" class="city">
+                        <option id="noneCity" value="全部" selected>全部</option>
+                    </select>
+                </label>
+                <button type="button"
+                        onclick="alert('已找到主题为 '+document.getElementById('theme').value+' 国家为 '+document.getElementById('country').value+' 城市为 '+document.getElementById('city').value+' 的结果')">
+                    搜索
+                </button>
+            </form>
+        </div>
+        <hr>
+        <div id="result">
+            <p>结果<a href="details.html" id="details" hidden></a></p>
+            <div id="pictures">
+                <div class="picture">
+                    <img src="../img/1.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <div class="picture">
+                    <img src="../img/2.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <div class="picture">
+                    <img src="../img/3.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <div class="picture">
+                    <img src="../img/4.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <br>
+                <div class="picture">
+                    <img src="../img/5.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <div class="picture">
+                    <img src="../img/6.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <div class="picture">
+                    <img src="../img/7.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <div class="picture">
+                    <img src="../img/8.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <br>
+                <div class="picture">
+                    <img src="../img/9.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <div class="picture">
+                    <img src="../img/10.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <div class="picture">
+                    <img src="../img/11.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <div class="picture">
+                    <img src="../img/12.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <br>
+                <div class="picture">
+                    <img src="../img/13.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <div class="picture">
+                    <img src="../img/14.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <div class="picture">
+                    <img src="../img/15.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+                <div class="picture">
+                    <img src="../img/16.jpg" alt="" onclick="document.getElementById('details').click()">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="pages">
+            <a href="#"><</a><a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a
+                href="#">></a>
+        </div>
+    </div>
+</div>
+<div id="foot">
+    <p>© 2020－2021 index.html, no rights reserved 复旦大学</p>
+</div>
+</body>
+</html>

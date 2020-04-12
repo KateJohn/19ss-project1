@@ -1,0 +1,64 @@
+#headerPicture{
+    margin-top: 20px;
+    text-align: center;
+    max-width: 100%;
+}
+
+#bodyPicture{
+    text-align: center;
+}
+
+.picture{
+    display: inline-block;
+    margin: 20px 50px 20px;
+    background-color: #aebdbe;
+    padding: 20px;
+    border-radius: 20px;
+    line-height: 30px;
+}
+
+#body .picture img{
+    height: 300px;
+    width: 300px;
+    display: block;
+}
+
+.title{
+    margin-left: 0;
+}
+
+.describe{
+    color: #f9f9f9;
+}
+
+#aside{
+    position: fixed;
+    left: 1250px;
+    top: 500px;
+}
+
+#aside img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+#foot{
+    background-color: antiquewhite;
+    padding: 50px;
+    line-height: 30px;
+}
+
+#leftFoot{
+    display: inline-block;
+    margin-left: 10%;
+}
+
+#rightFoot{
+    display: inline-block;
+    margin-left: 20%;
+}
+
+#rightFoot a{
+    color: #0019ff;
+}

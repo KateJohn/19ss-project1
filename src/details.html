@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/body.css">
+    <link rel="stylesheet" type="text/css" href="css/details.css">
+    <title>样例</title>
+</head>
+<body>
+<div id="header">
+    <div id="logo">
+        <img src="../img/logo.jpg" alt width="35" height="35">
+    </div>
+    <div id="navItems">
+        <a href="../index.html" id="AIndex">首页</a>
+        <a href="browser.html" id="ABrowse">浏览</a>
+        <a href="search.html" id="ASearch">搜索</a>
+    </div>
+    <div class="dropdown">
+        <span>个人中心</span>
+        <div class="dropdownContent">
+            <a href="upload.html" id="AUpload"><img src="../img/upload.png" width="20" alt/> 上传</a><br>
+            <a href="myPhoto.html" id="AMP"><img src="../img/mine.png" width="20" alt/> 我的照⽚</a><br>
+            <a href="myLike.html" id="AML"><img src="../img/like.png" width="20" alt/> 我的收藏</a><br>
+            <a href="login.html" id="ALogin"><img src="../img/login.png" width="20" alt/> 登⼊</a><br>
+        </div>
+    </div>
+</div>
+<div id="body">
+    <div id="details">
+        <p id="detailsTitle" class="title">样例</p>
+        <hr>
+        <div id="pictureTitle">
+            <p id="mainTitle">标题</p>
+            <p id="smallTitle">by作者</p>
+        </div>
+        <div id="detailsPicture">
+            <img src="../img/pic0.jpg" alt>
+        </div>
+        <div id="detailsDescription">
+            <div id="numberLike">
+                <p id="NLTitle" class="title">喜欢数</p>
+                <hr>
+                <p id="NLNumber">0</p>
+            </div>
+            <div id="someDetails">
+                <p id="SDTitle" class="title">图片细节</p>
+                <hr>
+                <p id="SDContent">内容： 未知</p>
+                <p id="SDCountry">国家： 未知</p>
+                <p id="SDCity">城市： 未知</p>
+            </div>
+            <button id="like" onclick="alert('已收藏')">收藏</button>
+        </div>
+        <div id="detailsIntroduction">
+            <p id="DIWords">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
+        </div>
+    </div>
+</div>
+<div id="foot">
+    <p>© 2020－2021 index.html, no rights reserved 复旦大学</p>
+</div>
+</body>
+</html>

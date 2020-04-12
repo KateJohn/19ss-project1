@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="src/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="src/css/header.css">
+    <link rel="stylesheet" type="text/css" href="src/css/body.css">
+    <link rel="stylesheet" type="text/css" href="src/css/index.css">
+    <title>首页</title>
+</head>
+<body>
+<div id="header">
+    <div id="logo">
+        <img src="img/logo.jpg" alt width="35" height="35">
+    </div>
+    <div id="navItems">
+        <a href="index.html" id="AIndex" class="select">首页</a>
+        <a href="src/browser.html" id="ABrowse">浏览</a>
+        <a href="src/search.html" id="ASearch">搜索</a>
+    </div>
+    <div class="dropdown">
+        <span>个人中心</span>
+        <div class="dropdownContent">
+            <a href="src/upload.html" id="AUpload"><img src="img/upload.png" width="20" alt/> 上传</a><br>
+            <a href="src/myPhoto.html" id="AMP"><img src="img/mine.png" width="20" alt/> 我的照⽚</a><br>
+            <a href="src/myLike.html" id="AML"><img src="img/like.png" width="20" alt/> 我的收藏</a><br>
+            <a href="src/login.html" id="ALogin"><img src="img/login.png" width="20" alt/> 登⼊</a><br>
+        </div>
+    </div>
+</div>
+<div id="body">
+    <div id="headerPicture">
+        <img src="img/pic0.jpg" alt="" onclick="document.getElementById('details').click()">
+    </div>
+    <div id="bodyPicture">
+        <div class="picture">
+            <img src="img/pic1.jpg" alt onclick="document.getElementById('details').click()">
+            <a class="title" href="src/details.html" id="details">标题</a>
+            <p class="description">描述描述描述描述描述描述……</p>
+        </div>
+        <div class="picture">
+            <img src="img/pic2.jpg" alt onclick="document.getElementById('details').click()">
+            <a class="title" href="src/details.html">标题</a>
+            <p class="description">描述描述描述描述描述描述……</p>
+        </div>
+        <div class="picture">
+            <img src="img/pic3.jpg" alt onclick="document.getElementById('details').click()">
+            <a class="title" href="src/details.html">标题</a>
+            <p class="description">描述描述描述描述描述描述……</p>
+        </div>
+        <div class="picture">
+            <img src="img/pic4.jpg" alt onclick="document.getElementById('details').click()">
+            <a class="title" href="src/details.html">标题</a>
+            <p class="description">描述描述描述描述描述描述……</p>
+        </div>
+        <div class="picture">
+            <img src="img/pic5.jpg" alt onclick="document.getElementById('details').click()">
+            <a class="title" href="src/details.html">标题</a>
+            <p class="description">描述描述描述描述描述描述……</p>
+        </div>
+        <div class="picture">
+            <img src="img/pic6.jpg" alt onclick="document.getElementById('details').click()">
+            <a class="title" href="src/details.html">标题</a>
+            <p class="description">描述描述描述描述描述描述……</p>
+        </div>
+    </div>
+    <div id="aside">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="img/top.png" alt="">
+                </a>
+            </li>
+            <li>
+                <img src="img/refresh.png" alt="" onclick="alert('图⽚已刷新')">
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="foot">
+    <div id="leftFoot">
+        <p>© 2020－2021 index.html, no rights reserved 复旦大学</p>
+        <p>京公网安备19302010005</p>
+        <p>违法和不良信息举报电话：4008353331-9</p>
+        <p>中国互联网举报中心 电话：12377</p>
+    </div>
+    <div id="rightFoot">
+        <ul>
+            <li>
+                <a href="">关于我们</a>
+            </li>
+            <li>
+                <a href="">联系我们</a>
+            </li>
+            <li>
+                <a href="">法律声明</a>
+            </li>
+            <li>
+                <a href="">帮助中心</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

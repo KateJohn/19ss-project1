@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/body.css">
+    <link rel="stylesheet" type="text/css" href="css/upload.css">
+    <title>上传</title>
+</head>
+<body>
+<div id="header">
+    <div id="logo">
+        <img src="../img/logo.jpg" alt width="35" height="35">
+    </div>
+    <div id="navItems">
+        <a href="../index.html" id="AIndex">首页</a>
+        <a href="browser.html" id="ABrowse">浏览</a>
+        <a href="search.html" id="ASearch">搜索</a>
+    </div>
+    <div class="dropdown">
+        <span class="select">个人中心</span>
+        <div class="dropdownContent">
+            <a href="upload.html" id="AUpload" class="select"><img src="../img/upload.png" width="20" alt/> 上传</a><br>
+            <a href="myPhoto.html" id="AMP"><img src="../img/mine.png" width="20" alt/> 我的照⽚</a><br>
+            <a href="myLike.html" id="AML"><img src="../img/like.png" width="20" alt/> 我的收藏</a><br>
+            <a href="login.html" id="ALogin"><img src="../img/login.png" width="20" alt/> 登⼊</a><br>
+        </div>
+    </div>
+</div>
+<div id="body">
+    <div id="upload">
+        <form id="uploadForm">
+            <p id="uploadTitle" class="title">上传</p>
+            <hr>
+            <div id="uploadBody">
+                <input id="input" type="file" required><br>
+                <img id="img" src="../img/notUploaded.png" alt="Image preview area..." title="preview-img"><br>
+                <input id="UPButton" type="button" onclick="document.getElementById('input').click()" value="浏览">
+                <script>
+                    var fileInput = document.getElementById('input'),
+                        previewImg = document.getElementById('img');
+                    fileInput.addEventListener('change', function () {
+                        var file = this.files[0];
+                        var reader = new FileReader();
+                        reader.addEventListener("load", function () {
+                            previewImg.src = reader.result;
+                        }, false);
+                        reader.readAsDataURL(file);
+                    }, false);
+                </script>
+            </div>
+            <hr>
+            <div id="uploadDescription">
+                <p>图片标题</p>
+                <label>
+                    <input id="UPTitle" type="text" required name="UPTitle" class="UP">
+                </label>
+                <p>图片描述</p>
+                <label>
+                    <textarea rows="" cols="" id="UPDescription" required contenteditable="true" class="UP"></textarea>
+                </label>
+                <p>拍摄国家</p>
+                <label>
+                    <input id="UPCountry" type="text" required name="UPCountry" class="UP">
+                </label>
+                <p>拍摄城市</p>
+                <label>
+                    <input id="UPCity" type="text" required name="UPCity" class="UP">
+                </label>
+            </div>
+            <div id="submit">
+                <button id="submitButton" type="submit" onclick="">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="foot">
+    <p>© 2020－2021 index.html, no rights reserved 复旦大学</p>
+</div>
+</body>
+</html>
