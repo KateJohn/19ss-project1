@@ -4,9 +4,9 @@
 
 <u>**Github 地址和 Github Pages 地址**</u>
 
-https://github.com/KateJohn
-
 https://github.com/KateJohn/19ss-project1
+
+https://katejohn.github.io/19ss-project1/
 
 <u>**你的项⽬完成情况**</u>
 
