@@ -1,5 +1,6 @@
 #leftBody {
-    margin-left: 40px;
+    margin-left: 3%;
+    width: 24%;
     line-height: 25px;
     display: inline-block;
 }
@@ -9,7 +10,10 @@
     border-radius: 20px;
     margin-bottom: 30px;
     padding: 20px;
-    width: 240px;
+}
+
+#searchTitle {
+    width: 80%;
 }
 
 #hotThemes {
@@ -17,7 +21,6 @@
     border-radius: 20px;
     margin-bottom: 30px;
     padding: 20px;
-    width: 240px;
 }
 
 .firstType {
@@ -61,30 +64,38 @@
     border-radius: 20px;
     margin-bottom: 30px;
     padding: 20px;
-    width: 240px;
 }
 
 #hotCities {
     background-color: #aebdbe;
     border-radius: 20px;
     padding: 20px;
-    width: 240px;
 }
 
 #rightBody {
     display: inline-block;
     vertical-align: top;
-    margin-left: 40px;
+    margin-left: 3%;
     background-color: #aebdbe;
     border-radius: 20px;
     padding: 20px;
     line-height: 30px;
-    margin-right: 40px;
+    width: 60%;
+}
+
+#pictures {
+    text-align: center;
 }
 
 .picture {
-    margin: 20px;
     display: inline-block;
+    max-width: 20%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.picture img {
+    max-width: 100%;
 }
 
 .form {
@@ -100,6 +111,6 @@ select {
 }
 
 #pages a {
-    margin: 20px;
+    margin: 4%;
     color: steelblue;
 }

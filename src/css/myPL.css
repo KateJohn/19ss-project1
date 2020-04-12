@@ -23,17 +23,19 @@
 
 .img {
     display: inline-block;
+    width: 20%;
+    margin-left: 3%;
 }
 
-#body img {
-    width: 250px;
+.img img {
+    width: 100%;
 }
 
 .tc {
     display: inline-block;
     line-height: 30px;
-    margin-left: 20px;
-    width: 846px;
+    margin-left: 3%;
+    width: 70%;
     vertical-align: top;
 }
 
@@ -51,7 +53,7 @@
 }
 
 #pages a {
-    margin: 20px;
+    margin: 3%;
     color: steelblue;
 }
 

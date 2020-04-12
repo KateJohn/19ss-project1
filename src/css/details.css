@@ -22,16 +22,21 @@
 }
 
 #detailsPicture {
-    display: inline-block;
-    margin-left: 40px;
+    margin-left: 3%;
+    margin-right: 3%;
+    float: left;
+}
+
+#detailsPicture img {
+    max-width: 100%;
 }
 
 #detailsDescription {
-    display: inline-block;
     vertical-align: top;
-    margin-left: 50px;
-    margin-right: 40px;
-    width: 35%;
+    margin-left: 3%;
+    margin-right: 3%;
+    overflow: hidden;
+    min-width: 200px;
 }
 
 #numberLike, #someDetails {
